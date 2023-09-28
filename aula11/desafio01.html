@@ -6,24 +6,20 @@
     <title>Nacionalidade</title>
 </head>
 <body>
-    <h1>Brasileiro ou Estrangeiro?</h1>
-    Digite o país que está vivendo: <input type="text" name="txtnac" id="txtnac">
+    <h1>Descubra a sua Nacionalidade:</h1>
+    Digite o país que você nasceu: <input type="text" name="nasc" id="nasc">
     <input type="button" value="Verificar" onclick="calcular()">
-    <div id="res">
-
-    </div>
+    <div id="res"></div>
     <script>
-        function calcular() {
-            var txtn = window.document.getElementById('txtnac')
-            var res =  window.document.getElementById('res')
-            var pais = String(txtnac.value)
-            res.innerHTML = `Seu país atual é ${pais}`
-            if (pais == 'Brasil') {
-                res.innerHTML=`<p>Você é Brasileiro</p>`
-            } else {
-                res.innerHTML=`<p>Você é Estrangeiro</p>`
+        function calcular(){
+            var paisc = window.document.getElementById('nasc')
+            var res = window.document.getElementById('res')
+            var pais = String(paisc.value)
+            res.innerHTML = `<p> O país que você nasceu é: ${pais}`
+                if (pais == 'Brasil') { 
+                    res.innerHTML += `Você é Brasileiro`
+                } else {
+                    res.innerHTML += `Você é Estrangeiro`
+                }
             }
-        }
     </script>
-</body>
-</html>
